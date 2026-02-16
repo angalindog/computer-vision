@@ -1,0 +1,72 @@
+# Datasets and datafiles
+**/data/
+**/datasets/
+*.csv
+*.tsv
+*.json
+
+# Trained models
+**/models/
+**/checkpoints/
+*.h5
+*.pth
+*.pkl
+*.onnx
+
+# Experiments Outputs
+**/output/
+**/outputs/
+**/results/
+**/experiments/
+
+# Numpy Arrays
+*.npy
+*.npz
+
+# Generated videos
+*.mp4
+*.avi
+*.mov
+
+# PYTHON / JUPYTER
+__pycache__/
+*.py[cod]
+*.pyc
+venv/
+.venv/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+
+# NODE.JS / THREE.JS
+node_modules/
+dist/
+build/
+npm-debug.log*
+
+# IDE & EDITORS
+.vscode/
+.idea/
+*.sublime-project
+*.swp
+
+# OPERATING SYSTEMS
+.DS_Store
+Thumbs.db
+*~
+
+# GENERAL
+*.log
+*.tmp
+temp/
+cache/
+*.zip
+*.tar.gz
+
+# ENVIRONMENT & SECRETS
+.env
+.env.local
+*.key
+*.pem
+credentials.json
