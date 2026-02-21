@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap');
+
+/* ─── Reset & variables ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d0d0f;
+  --surface:   #131316;
+  --surface2:  #1a1a1f;
+  --border:    #2a2a32;
+  --accent:    #e8ff47;
+  --accent2:   #47c8ff;
+  --text:      #e8e8e8;
+  --muted:     #666;
+  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+/* ─── App shell ─────────────────────────────────────────── */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ─── Header ────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 18px 28px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.header-tag {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.header-title h1 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.header-desc {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
+  max-width: 200px;
+}
+
+.header-desc em {
+  color: var(--accent2);
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ─── Layout ─────────────────────────────────────────────── */
+.layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ─── Sidebar ────────────────────────────────────────────── */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.panel {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-label {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* ─── Format buttons ─────────────────────────────────────── */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fmt-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.fmt-btn:hover {
+  border-color: #444;
+  color: var(--text);
+}
+
+.fmt-btn.active {
+  border-color: var(--accent);
+  color: var(--text);
+  background: rgba(232, 255, 71, 0.05);
+}
+
+.fmt-ext {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--accent);
+  min-width: 42px;
+}
+
+.fmt-btn:not(.active) .fmt-ext { color: var(--muted); }
+
+.fmt-file {
+  font-size: 10px;
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─── Info panel ─────────────────────────────────────────── */
+.info-panel { background: var(--surface2); }
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-row:last-of-type { border-bottom: none; }
+
+.info-key { color: var(--muted); font-size: 11px; }
+
+.info-val {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--accent2);
+}
+
+.info-val.tag {
+  background: rgba(71, 200, 255, 0.1);
+  border: 1px solid rgba(71, 200, 255, 0.3);
+  border-radius: 3px;
+  padding: 1px 7px;
+  font-size: 11px;
+}
+
+.info-desc {
+  margin-top: 10px;
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ─── Options ────────────────────────────────────────────── */
+.opt-btn {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.opt-btn:hover { border-color: #444; color: var(--text); }
+.opt-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(232,255,71,0.05); }
+
+/* ─── Diff list ──────────────────────────────────────────── */
+.diff-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diff-list li {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+  padding-left: 10px;
+  border-left: 2px solid var(--border);
+}
+
+.diff-list li strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 1px;
+}
+
+/* ─── Viewport ───────────────────────────────────────────── */
+.viewport {
+  flex: 1;
+  position: relative;
+  background: #0d0d0f;
+}
+
+.viewport canvas { display: block; }
+
+/* ─── HUD overlay ────────────────────────────────────────── */
+.hud {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(13, 13, 15, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.hud-fmt {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hud-sep { color: var(--border); }
+
+/* ─── Controls hint ──────────────────────────────────────── */
+.controls-hint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
