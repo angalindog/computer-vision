@@ -24,7 +24,6 @@
 *.npz
 
 # Generated videos
-*.mp4
 *.avi
 *.mov
 
