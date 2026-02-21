@@ -99,18 +99,12 @@ vpoints = Points(mesh_data.vertices, c="#493db8", r=5)
 
 ## 🤖 Prompts Utilizados
 
-"¿Cómo se puede implementar la manipulación de un objeto 3D (.OBJ) en Python y en Three.js?"
-
+    "¿Cómo se puede implementar la manipulación de un objeto 3D (.OBJ) en Python y en Three.js?"
     "¿Cómo se cuentan los vértices, aristas y caras en los modelos 3D usando librerías de Python?"
-
     "Genera un formato para el README del taller, siguiendo las siguientes condiciones..."
-
     "Ayúdame a resolver el siguiente error técnico con la librería vedo en Python."
-
     "¿Cómo puedo crear un GIF de la animación automáticamente después de ejecutar el programa?"
-
     "Ayúdame a corregir la ortografía y redacción del siguiente texto explicativo sobre el taller."
-
     Nota: La gran mayoría de las consultas se centraron en la resolución de errores de dependencias.
 
 ## 📚 Aprendizajes
