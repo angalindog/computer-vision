@@ -1,4 +1,4 @@
-# Taller - Jerarquías y Transformaciones: El Árbol del Movimiento
+# Taller - Jerarquias Transformaciones
 
 **Estudiante:** Andres Felipe Galindo Gonzalez  
 **Fecha:** 21 de Febrero, 2026
