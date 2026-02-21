@@ -1,4 +1,4 @@
-# Taller - Construyendo el Mundo 3D
+# Taller - Conversion Formatos 3D
 
 **Estudiante:** Andres Felipe Galindo Gonzalez
 **Fecha:** 21 de Febrero, 2026
