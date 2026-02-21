@@ -148,7 +148,7 @@ popMatrix();
 **Resultados:**
 
 ![Captura Processing 1](media/ev2_modelo_processing.png)
-![Video Processing 2](media/ev4_modelo_processing.png)
+![Video Processing 2](media/ev4_modelo_processing.mp4)
 
 ---
 
